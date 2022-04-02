@@ -3,15 +3,9 @@ html, body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  border: 3px solid green;
   padding: 10px;
 }
 canvas {
   display: block;
-}
-
-.center {
-  margin: auto;
-  width: 50%;
-  border: 3px solid green;
-  padding: 10px;
 }
