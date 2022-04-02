@@ -19,9 +19,9 @@ function setup() {
   score = 0;
   bg = loadImage('imgs/bg.png'); // add this to load the background
   noodlerLeft = loadImage('imgs/ramen.png');
-  noodlerRight = loadImage('imgs/noodler-right.png');
-  noodler = new noodler(noodlerLeft, noodlerRight);
-  platformImg = loadImage('imgs/platform.png');
+  noodlerRight = loadImage('imgs/ramen-reverse.png');
+  noodler = new Noodler();
+  platformImg = loadImage('imgs/pepper1.png');
 
   let platformCount = 4;
   gap = height / platformCount;
@@ -49,13 +49,9 @@ function draw() {
     noodler.draw();
     noodler.update(platforms);
 
-
-
-
     for (let platform of platforms) {
       platform.draw();
     }
-
 
     // create more platforms as the noodler moves up the screen
     if (noodler.y < platforms[platforms.length - 1].y + 200) {
@@ -66,11 +62,7 @@ function draw() {
       platforms.splice(0, 1);
       score++;
     }
-
-
   }
-
-
 }
 
 function gameOver() {
@@ -86,6 +78,7 @@ function gameOver() {
 
 function keyPressed() {
   if (key == ' ') {
+    doodler.jump();
     setup();
     loop();
   }
