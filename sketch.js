@@ -19,7 +19,7 @@ function setup() {
   score = 0;
   bg = loadImage('spicy background.jpg'); // add this to load the background
   noodlerLeft = loadImage('imgs/ramen.png');
-  noodlerRight = loadImage('imgs/ramen-reverse.png');
+  noodlerRight = loadImage('imgs/ramen_reverse.png');
   noodler = new Noodler(noodlerLeft, noodlerRight);
   platformImg = loadImage('imgs/pepper1.png');
 
@@ -67,12 +67,33 @@ function draw() {
 
 function gameOver() {
   
-  textSize(30);
+  textSize(20);
   image(bg, 0, 0);
   textAlign(CENTER);
-  text(`You scored ${score}`, width / 2, height / 2);
+  text(`You scored ${score}`, width / 2, height / 4);
+  if (score < 25) {
+    scoville = "Mild"
+    pep_img =
+  } else if ((score >= 25) && (score < 50)) {
+    scoville = "Medium"
+    pep_img = 
+  } else if ((score >= 50) && (score < 75)) {
+    scoville = "Hot"
+    pep_img =
+  } else if ((score >= 75) && (score < 100)) {
+    scoville = "Extra Hot"
+    pep_img =
+  } else if ((score >= 100) && (score < 125)) {
+    scoville = "Extremely Hot"
+    pep_img =
+  } else {
+    scoville = "Fire"
+    pep_img =
+  }
   textSize(25);
-  text(`Hit space to play again`, width / 2, height / 2 + 100);
+  text(`Your spice level is ${scoville}`, width/2 , height /3);
+  textSize(25);
+  text(`Hit space to play again`, width / 2, height / 2);
 }
 
 
