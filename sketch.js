@@ -17,7 +17,7 @@ function setup() {
 
   platforms = [];
   score = 0;
-  bg = loadImage('imgs/bg.png'); // add this to load the background
+  bg = loadImage('spicy background.jpg'); // add this to load the background
   noodlerLeft = loadImage('imgs/ramen.png');
   noodlerRight = loadImage('imgs/ramen-reverse.png');
   noodler = new Noodler(noodlerLeft, noodlerRight);
