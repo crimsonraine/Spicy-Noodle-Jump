@@ -1,6 +1,9 @@
 // Find my blog at https://codeheir.com/
 // I do a lot of p5.js stuff that might interest you!
 
+import Noodler from "spicy_noodler.js";
+import Platform from "Platform.js";
+
 let noodler;
 
 let gap;
