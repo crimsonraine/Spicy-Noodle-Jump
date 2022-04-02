@@ -41,8 +41,9 @@ function draw() {
 
     push();
     fill(0)
-    textSize(30);
+    textSize(50);
     textAlign(CENTER);
+    fill(255, 255, 255)
     text(score, width / 2, noodler.y - 150);
     pop();
 
