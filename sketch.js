@@ -1,9 +1,3 @@
-// Find my blog at https://codeheir.com/
-// I do a lot of p5.js stuff that might interest you!
-
-//import Noodler from "spicy_noodler.js";
-//import Platform from "Platform.js";
-
 let noodler;
 
 let gap;
@@ -18,6 +12,7 @@ let platformImg;
 function charSet() {
   textSize(24);
   image(bg, 0, 0);
+  fill(255, 255, 255);
   textAlign(CENTER);
   text(`M for menu and J/j and K/k
         for a different ramen!
