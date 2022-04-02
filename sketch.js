@@ -18,6 +18,7 @@ let platformImg;
 function charSet() {
   textSize(24);
   image(bg, 0, 0);
+  fill(255, 255, 255);
   textAlign(CENTER);
   text(`M for menu and J/j and K/k
 for a different ramen!
@@ -26,7 +27,7 @@ for a different ramen!
 
 Space/s to restart!
 References: codeheir.com
-(p5.js help)`, width / 2, height / 2);
+(p5.js help)`, width / 2, height / 3);
 }
 
 function setup() {
@@ -108,8 +109,8 @@ function gameOver() {
   }
   textSize(25);
   text(`\n\nYour spice level is ${scoville}!`, width/2 , height /3);
-  sco = loadImage('Scoville Chart.png');
-  image(sco, 0, 0 );
+  sco = loadImage('imgs/scoville.png');
+  image(sco, width / 2, 9 * height / 10);
   fill(255, 255, 255);
 
   // if (score < 25) {
