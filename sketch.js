@@ -67,10 +67,14 @@ function draw() {
 
 function gameOver() {
   
-  textSize(20);
+  textSize(30);
   image(bg, 0, 0);
   textAlign(CENTER);
-  text(`You scored ${score}`, width / 2, height / 4);
+  fill(255, 255, 255);
+  text(`You scored `, width / 2, height / 3);
+  fill(255, 0, 0);
+  textSize(50);
+  text(`\n${score}`, width / 2, height / 3);
   // if (score < 25) {
   //   scoville = "Mild"
   //   pep_img =
@@ -94,6 +98,7 @@ function gameOver() {
   // text(`Your spice level is ${scoville}`, width/2 , height /3);
   // add image here
   textSize(25);
+  fill(255, 255, 255)
   text(`Hit space to play again`, width / 2, height / 2);
 }
 
