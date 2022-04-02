@@ -26,7 +26,7 @@ for a different ramen!
 
 Space/s to restart!
 References: codeheir.com
-`, width / 2, height / 2);
+(p5.js help)`, width / 2, height / 2);
 }
 
 function setup() {
@@ -93,15 +93,15 @@ function gameOver() {
   fill(255, 0, 0);
   textSize(50);
   text(`\n${score}`, width / 2, height / 4);
-  if (score < 25) {
+  if (score < 150) {
     scoville = "Mild"
-  } else if ((score >= 25) && (score < 50)) {
+  } else if ((score >= 150) && (score < 300)) {
     scoville = "Medium"
-  } else if ((score >= 50) && (score < 75)) {
+  } else if ((score >= 300) && (score < 450)) {
     scoville = "Hot"
-  } else if ((score >= 75) && (score < 100)) {
+  } else if ((score >= 450) && (score < 600)) {
     scoville = "Extra Hot"
-  } else if ((score >= 100) && (score < 125)) {
+  } else if ((score >= 600) && (score < 750)) {
     scoville = "Extremely Hot"
   } else {
     scoville = "Fire"
@@ -149,8 +149,8 @@ function keyPressed() {
   } else if (key === 'J' || key === "j") {
     noodler.change_img(loadImage('imgs/ramen_spicier.png'), loadImage('imgs/ramen_spicier_reverse.png'))
   } else if (key === 'M' || key === "m") {
-    charSet();
     noLoop();
+    charSet();
   } else if (key === 'K' || key === "k") {
     noodler.change_img(loadImage('imgs/ramen.png'), loadImage('imgs/ramen_reverse.png'))
   }
