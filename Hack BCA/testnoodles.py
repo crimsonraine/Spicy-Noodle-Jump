@@ -2,11 +2,11 @@ import pygame, sys, time, random
 #from pygame import freetype
 
 pygame.init()
-DisplayWidth,DisplayHeight = 400, 400
+DisplayWidth,DisplayHeight = 600, 600
 clock = pygame.time.Clock()
 
 gameDisplay = pygame.display.set_mode((DisplayWidth,DisplayHeight))
-pygame.display.set_caption("Noodle Jump")
+pygame.display.set_caption("Noodle Jump: Spicy Edition")
 
 class Noodle_Manager (object):
     #def __init__(self):

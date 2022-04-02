@@ -12,8 +12,8 @@ pygame.init()
 DisplayWidth,DisplayHeight = 800, 800
 clock = pygame.time.Clock()
 
-gameDisplay = pygame.display.set_mode((DisplayWidth,DisplayHeight))
-pygame.display.set_caption("Jumpy Game")
+gameDisplay = pygame.display.set_mode((DisplayWidth, DisplayHeight))
+pygame.display.set_caption("Noodle Jump Game")
 game_font = pygame.freetype.Font("Font.ttf", 24)
 
 global CurColor
