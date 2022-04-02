@@ -1,8 +1,8 @@
 // Find my blog at https://codeheir.com/
 // I do a lot of p5.js stuff that might interest you!
 
-import Noodler from "spicy_noodler.js";
-import Platform from "Platform.js";
+//import Noodler from "spicy_noodler.js";
+//import Platform from "Platform.js";
 
 let noodler;
 
@@ -15,9 +15,23 @@ let noodlerLeft;
 let noodlerRight;
 let platformImg;
 
+function charSet() {
+  textSize(24);
+  image(bg, 0, 0);
+  textAlign(CENTER);
+  text(`M for menu and J/j and K/k
+for a different ramen!
+(Trial Version)
+
+
+Space/s to restart!
+References: codeheir.com
+(p5.js help)`, width / 2, height / 2);
+}
+
 function setup() {
   createCanvas(400, 600);
-
+  // charSet()
   platforms = [];
   score = 0;
   bg = loadImage('spicy background.jpg'); // add this to load the background
@@ -73,12 +87,31 @@ function gameOver() {
   
   textSize(30);
   image(bg, 0, 0);
-  textAlign(CENTER);
   fill(255, 255, 255);
-  text(`You scored `, width / 2, height / 3);
+  textAlign(CENTER);
+  text(`You scored`, width / 2, height / 4);
   fill(255, 0, 0);
   textSize(50);
-  text(`\n${score}`, width / 2, height / 3);
+  text(`\n${score}`, width / 2, height / 4);
+  if (score < 150) {
+    scoville = "Mild"
+  } else if ((score >= 150) && (score < 300)) {
+    scoville = "Medium"
+  } else if ((score >= 300) && (score < 450)) {
+    scoville = "Hot"
+  } else if ((score >= 450) && (score < 600)) {
+    scoville = "Extra Hot"
+  } else if ((score >= 600) && (score < 750)) {
+    scoville = "Extremely Hot"
+  } else {
+    scoville = "Fire"
+  }
+  textSize(25);
+  text(`\n\nYour spice level is ${scoville}!`, width/2 , height /3);
+  sco = loadImage('Scoville Chart.png');
+  image(sco, 0, 0 );
+  fill(255, 255, 255);
+
   // if (score < 25) {
   //   scoville = "Mild"
   //   pep_img =
@@ -87,10 +120,8 @@ function gameOver() {
   //   pep_img = 
   // } else if ((score >= 50) && (score < 75)) {
   //   scoville = "Hot"
-  //   pep_img =
   // } else if ((score >= 75) && (score < 100)) {
   //   scoville = "Extra Hot"
-  //   pep_img =
   // } else if ((score >= 100) && (score < 125)) {
   //   scoville = "Extremely Hot"
   //   pep_img =
@@ -109,7 +140,16 @@ function gameOver() {
 
       
 function keyPressed() {
-  if (key == ' ') {
-    location.reload()
+  if ((key === ' ') || (key === 's')) {
+    // doodler.jump();
+    setup();
+    loop();
+  } else if (key === 'J' || key === "j") {
+    noodler.change_img(loadImage('imgs/ramen_spicier.png'), loadImage('imgs/ramen_spicier_reverse.png'))
+  } else if (key === 'M' || key === "m") {
+    noLoop();
+    charSet();
+  } else if (key === 'K' || key === "k") {
+    noodler.change_img(loadImage('imgs/ramen.png'), loadImage('imgs/ramen_reverse.png'))
   }
 }
