@@ -71,25 +71,25 @@ function gameOver() {
   image(bg, 0, 0);
   textAlign(CENTER);
   text(`You scored ${score}`, width / 2, height / 4);
-  if (score < 25) {
-    scoville = "Mild"
-    pep_img =
-  } else if ((score >= 25) && (score < 50)) {
-    scoville = "Medium"
-    pep_img = 
-  } else if ((score >= 50) && (score < 75)) {
-    scoville = "Hot"
-    pep_img =
-  } else if ((score >= 75) && (score < 100)) {
-    scoville = "Extra Hot"
-    pep_img =
-  } else if ((score >= 100) && (score < 125)) {
-    scoville = "Extremely Hot"
-    pep_img =
-  } else {
-    scoville = "Fire"
-    pep_img =
-  }
+  // if (score < 25) {
+  //   scoville = "Mild"
+  //   pep_img =
+  // } else if ((score >= 25) && (score < 50)) {
+  //   scoville = "Medium"
+  //   pep_img = 
+  // } else if ((score >= 50) && (score < 75)) {
+  //   scoville = "Hot"
+  //   pep_img =
+  // } else if ((score >= 75) && (score < 100)) {
+  //   scoville = "Extra Hot"
+  //   pep_img =
+  // } else if ((score >= 100) && (score < 125)) {
+  //   scoville = "Extremely Hot"
+  //   pep_img =
+  // } else {
+  //   scoville = "Fire"
+  //   pep_img =
+  // }
   textSize(25);
   text(`Your spice level is ${scoville}`, width/2 , height /3);
   // add image here
