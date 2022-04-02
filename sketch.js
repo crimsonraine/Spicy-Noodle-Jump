@@ -1,15 +1,15 @@
 // Find my blog at https://codeheir.com/
 // I do a lot of p5.js stuff that might interest you!
 
-let doodler;
+let noodler;
 
 let gap;
 let platforms = [];
 
 let score;
 let bg;
-let doodlerLeft;
-let doodlerRight;
+let noodlerLeft;
+let noodlerRight;
 let platformImg;
 
 function setup() {
@@ -18,9 +18,9 @@ function setup() {
   platforms = [];
   score = 0;
   bg = loadImage('bg.png'); // add this to load the background
-  doodlerLeft = loadImage('doodler-left.png');
-  doodlerRight = loadImage('doodler-right.png');
-  doodler = new Doodler(doodlerLeft, doodlerRight);
+  noodlerLeft = loadImage('imgs/ramen.png');
+  noodlerRight = loadImage('noodler-right.png');
+  noodler = new noodler(noodlerLeft, noodlerRight);
   platformImg = loadImage('platform.png');
 
   let platformCount = 4;
@@ -33,21 +33,21 @@ function setup() {
 
 function draw() {
   image(bg, 0, 0);
-  if (doodler.velocity > 10) {
+  if (noodler.velocity > 10) {
     noLoop();
     gameOver();
   } else {
-    translate(0, width / 2 - doodler.y);
+    translate(0, width / 2 - noodler.y);
 
     push();
     fill(0)
     textSize(30);
     textAlign(CENTER);
-    text(score, width / 2, doodler.y - 150);
+    text(score, width / 2, noodler.y - 150);
     pop();
 
-    doodler.draw();
-    doodler.update(platforms);
+    noodler.draw();
+    noodler.update(platforms);
 
 
 
@@ -57,12 +57,12 @@ function draw() {
     }
 
 
-    // create more platforms as the doodler moves up the screen
-    if (doodler.y < platforms[platforms.length - 1].y + 200) {
+    // create more platforms as the noodler moves up the screen
+    if (noodler.y < platforms[platforms.length - 1].y + 200) {
       platforms.push(new Platform(random(width), platforms[platforms.length - 1].y - gap, platformImg));
     }
 
-    if (platforms[0].y > doodler.y + 400) {
+    if (platforms[0].y > noodler.y + 400) {
       platforms.splice(0, 1);
       score++;
     }
