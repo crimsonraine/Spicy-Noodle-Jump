@@ -1,4 +1,4 @@
-class Doodler {
+class Noodler {
   constructor(left, right) {
     this.x = width / 2-20;
     this.y = height / 2;

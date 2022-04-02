@@ -1,9 +1,12 @@
 # Spicy-Noodle-Jump
 Doodle Jump, but Revamped with Increasingly Spicy Platforms!
 
-Credits to Luke Garrigan from codeheir.com for the code!
+Credits to Luke Garrigan from codeheir.com for the code for a game frame!
 
 Contributors:
 
 Kimberley Ni
 Jeannelle Tellado
+
+Note:
+Run using p5.js extensions. Still learning how to operate p5.js stuff. - KN

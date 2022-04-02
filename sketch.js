@@ -17,11 +17,11 @@ function setup() {
 
   platforms = [];
   score = 0;
-  bg = loadImage('bg.png'); // add this to load the background
+  bg = loadImage('imgs/bg.png'); // add this to load the background
   noodlerLeft = loadImage('imgs/ramen.png');
-  noodlerRight = loadImage('noodler-right.png');
+  noodlerRight = loadImage('imgs/noodler-right.png');
   noodler = new noodler(noodlerLeft, noodlerRight);
-  platformImg = loadImage('platform.png');
+  platformImg = loadImage('imgs/platform.png');
 
   let platformCount = 4;
   gap = height / platformCount;
