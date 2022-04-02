@@ -27,7 +27,7 @@ function setup() {
   // charSet()
   platforms = [];
   score = 0;
-  bg = loadImage('spicy background.jpg'); // add this to load the background
+  bg = loadImage('imgs/spicybackground.jpg'); // add this to load the background
   noodlerLeft = loadImage('imgs/ramen.png');
   noodlerRight = loadImage('imgs/ramen_reverse.png');
   noodler = new Noodler(noodlerLeft, noodlerRight);
@@ -101,7 +101,7 @@ function gameOver() {
   }
   textSize(25);
   text(`\n\nYour spice level is ${scoville}!`, width/2 , height /3);
-  sco = loadImage('Scoville Chart.png');
+  sco = loadImage('imgs/ScovilleChart.png');
   image(sco, 0, 0);
   fill(255, 255, 255);
   text(`Hit space to play again`, width / 2, height / 2);
