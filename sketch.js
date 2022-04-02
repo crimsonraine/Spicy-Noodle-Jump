@@ -1,6 +1,3 @@
-// Find my blog at https://codeheir.com/
-// I do a lot of p5.js stuff that might interest you!
-
 let noodler;
 
 let gap;
@@ -12,9 +9,23 @@ let noodlerLeft;
 let noodlerRight;
 let platformImg;
 
+function charSet() {
+  textSize(24);
+  image(bg, 0, 0);
+  textAlign(CENTER);
+  text(`M for menu and J/j
+for a different ramen!
+(Trial Version)
+
+
+Space/s to restart!
+References: codeheir.com
+`, width / 2, height / 2);
+}
+
 function setup() {
   createCanvas(400, 600);
-
+  // charSet()
   platforms = [];
   score = 0;
   bg = loadImage('spicy background.jpg'); // add this to load the background
@@ -73,35 +84,35 @@ function gameOver() {
   text(`You scored ${score}`, width / 2, height / 4);
   if (score < 25) {
     scoville = "Mild"
-    pep_img =
   } else if ((score >= 25) && (score < 50)) {
     scoville = "Medium"
-    pep_img = 
   } else if ((score >= 50) && (score < 75)) {
     scoville = "Hot"
-    pep_img =
   } else if ((score >= 75) && (score < 100)) {
     scoville = "Extra Hot"
-    pep_img =
   } else if ((score >= 100) && (score < 125)) {
     scoville = "Extremely Hot"
-    pep_img =
   } else {
     scoville = "Fire"
-    pep_img =
   }
   textSize(25);
-  text(`Your spice level is ${scoville}`, width/2 , height /3);
-  // add image here
+  text(`Your spice level is ${scoville}!`, width/2 , height /3);
+  sco = loadImage('Scoville Chart.png');
+  image(sco, 0, 0 );
   textSize(25);
   text(`Hit space to play again`, width / 2, height / 2);
 }
 
 
 function keyPressed() {
-  if (key == ' ') {
-    doodler.jump();
+  if ((key === ' ') || (key === 's')) {
+    // doodler.jump();
     setup();
     loop();
+  } else if (key === 'J' || key === "j") {
+    noodler.change_img(loadImage('imgs/ramen_spicier.png'), loadImage('imgs/ramen_spicier_reverse.png'))
+  } else if (key === 'M' || key === "m") {
+    charSet();
+    noLoop();
   }
 }

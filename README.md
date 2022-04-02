@@ -5,8 +5,7 @@ Credits to Luke Garrigan from codeheir.com for the code for a game frame!
 
 Contributors:
 
-Kimberley Ni
-Jeannelle Tellado
+K, J, N, D, B, J, A
 
 Note:
 Run using p5.js extensions. Still learning how to operate p5.js stuff. - KN

@@ -3,13 +3,20 @@ class Noodler {
     this.x = width / 2;
     this.y = height / 2;
     this.height = 60;
-    this.width = 60;
+    this.width = 70;
     this.velocity = 0;
     this.gravity = 0.1;
-    this.jumpForce = 9;
+    this.jumpForce = 6;
     this.left = left;
     this.right = right;
     this.goingLeft = true;
+  }
+
+  change_img(limg, rimg) {
+    this.left = limg;
+    this.right = rimg;
+    this.x = width / 2;
+    this.y = height / 2;
   }
 
   draw() {
