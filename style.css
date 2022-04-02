@@ -5,7 +5,9 @@ html, body {
   transform: translate(-50%, -50%);
   border: 3px solid green;
   padding: 10px;
-
+  background: rgb(255,0,0);
+  background: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(255,226,0,1) 100%);
+  background-repeat: no-repeat;
 }
 canvas {
   display: block;
