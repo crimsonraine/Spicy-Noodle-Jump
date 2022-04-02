@@ -14,7 +14,7 @@ clock = pygame.time.Clock()
 
 gameDisplay = pygame.display.set_mode((DisplayWidth, DisplayHeight))
 pygame.display.set_caption("Noodle Jump Game")
-game_font = pygame.freetype.Font("Font.ttf", 24)
+game_font = pygame.freetype.Font("Spicy-Noodle-Jump/Hack BCA/Font.ttf", 24)
 
 global CurColor
 global HighScore
@@ -66,14 +66,14 @@ def MainScreen():
                         text_surface, rect = game_font.render(("Exit"), (0, 0, 0))
                         gameDisplay.blit(text_surface, (395, 690))
 
-                        game_font = pygame.freetype.Font("Font.ttf", 75)
+                        game_font = pygame.freetype.Font("Spicy-Noodle-Jump/Hack BCA/Font.ttf", 75)
 
                         text_surface, rect = game_font.render(("Programmer:"), (0, 0, 0))
                         gameDisplay.blit(text_surface, (250, 200))
                         text_surface, rect = game_font.render(("The8BitToaster"), (0, 0, 0))
                         gameDisplay.blit(text_surface, (220, 300))
 
-                        game_font = pygame.freetype.Font("Font.ttf", 50)
+                        game_font = pygame.freetype.Font("Spicy-Noodle-Jump/Hack BCAFont.ttf", 50)
 
                         text_surface, rect = game_font.render(("Check him out on Youtube"), (0, 0, 0))
                         gameDisplay.blit(text_surface, (200, 450))
@@ -89,10 +89,10 @@ def MainScreen():
 
         draw(0,0,"Overlay")
 
-        game_font = pygame.freetype.Font("Font.ttf", 75)
+        game_font = pygame.freetype.Font("Spicy-Noodle-Jump/Hack BCA/Font.ttf", 75)
         text_surface, rect = game_font.render(("Jumpy Game"), (0, 0, 0))
         gameDisplay.blit(text_surface, (250, 200))
-        game_font = pygame.freetype.Font("Font.ttf", 25)
+        game_font = pygame.freetype.Font("Spicy-Noodle-Jump/Hack BCA/Font.ttf", 25)
         text_surface, rect = game_font.render(("Highscore: " + str(HighScore)), (0, 0, 0))
         gameDisplay.blit(text_surface, (350 - (10 * len(str(int(HighScore)))), 300))
 
@@ -115,7 +115,7 @@ def MainScreen():
             pygame.draw.rect(gameDisplay,(255,0,0),(425,500,200,100),0)
 
 
-        game_font = pygame.freetype.Font("Font.ttf", 40)
+        game_font = pygame.freetype.Font("Spicy-Noodle-Jump/Hack BCA/Font.ttf", 40)
         text_surface, rect = game_font.render(("Play"), (0, 0, 0))
         gameDisplay.blit(text_surface, (230, 540))
         text_surface, rect = game_font.render(("Credits"), (0, 0, 0))
@@ -245,7 +245,7 @@ def draw(x,y,Obj):
         pygame.draw.rect(gameDisplay,(0,0,0),(0,0,150,800),10)
         pygame.draw.rect(gameDisplay,(0,0,0),(650,0,150,800),10)
     if Obj == "Score":
-        game_font = pygame.freetype.Font("Font.ttf", 24)
+        game_font = pygame.freetype.Font("Spicy-Noodle-Jump/Hack BCA/Font.ttf", 24)
         text_surface, rect = game_font.render(("Score: " + str(int(score))), (0, 0, 0))
         gameDisplay.blit(text_surface, (20, 50))
         text_surface, rect = game_font.render(("Platforms: " + str(int(PlatformCount))), (0, 0, 0))
