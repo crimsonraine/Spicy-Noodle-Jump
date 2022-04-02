@@ -120,10 +120,8 @@ function gameOver() {
   //   pep_img = 
   // } else if ((score >= 50) && (score < 75)) {
   //   scoville = "Hot"
-  //   pep_img =
   // } else if ((score >= 75) && (score < 100)) {
   //   scoville = "Extra Hot"
-  //   pep_img =
   // } else if ((score >= 100) && (score < 125)) {
   //   scoville = "Extremely Hot"
   //   pep_img =
