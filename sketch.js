@@ -24,7 +24,6 @@ function charSet() {
 for a different ramen!
 (Trial Version)
 
-
 Space/s to restart!
 References: codeheir.com
 (p5.js help)`, width / 2, height / 3);
