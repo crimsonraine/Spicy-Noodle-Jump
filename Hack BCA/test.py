@@ -213,7 +213,7 @@ def ChangeColor():
 
 
 def randomPlatform():
-    return [random.randint(150,450),0]
+    return [random.randint(150,350),0]
 
 def boundaries():
     global Platforms
@@ -291,7 +291,7 @@ def game_loop():
         RainbowNum = 0
 
     for i in range(6):
-        Platforms.append([random.randint(150,450),(i*100) + 100])
+        Platforms.append([random.randint(150,350),(i*100) + 100])
 
     x = 400
     y = 500
