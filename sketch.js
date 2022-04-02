@@ -92,6 +92,7 @@ function gameOver() {
   }
   textSize(25);
   text(`Your spice level is ${scoville}`, width/2 , height /3);
+  // add image here
   textSize(25);
   text(`Hit space to play again`, width / 2, height / 2);
 }
