@@ -15,11 +15,12 @@ function charSet() {
   fill(255, 255, 255);
   textAlign(CENTER);
   text(`M for menu and J/j and K/k
-        for a different ramen!
-        (Trial Version)\n\n
-        Space/s to restart!
-        References: codeheir.com
-        (p5.js help)`, width / 2, height / 2);
+for a different ramen!
+(Trial Version)
+
+Space/s to restart!
+References: codeheir.com
+(p5.js help)`, width / 2, height / 3);
 }
 
 function setup() {
