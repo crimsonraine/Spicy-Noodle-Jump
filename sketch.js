@@ -20,13 +20,11 @@ function charSet() {
   image(bg, 0, 0);
   textAlign(CENTER);
   text(`M for menu and J/j and K/k
-for a different ramen!
-(Trial Version)
-
-
-Space/s to restart!
-References: codeheir.com
-(p5.js help)`, width / 2, height / 2);
+        for a different ramen!
+        (Trial Version)\n\n
+        Space/s to restart!
+        References: codeheir.com
+        (p5.js help)`, width / 2, height / 2);
 }
 
 function setup() {
@@ -109,31 +107,8 @@ function gameOver() {
   textSize(25);
   text(`\n\nYour spice level is ${scoville}!`, width/2 , height /3);
   sco = loadImage('Scoville Chart.png');
-  image(sco, 0, 0 );
+  image(sco, 0, 0);
   fill(255, 255, 255);
-
-  // if (score < 25) {
-  //   scoville = "Mild"
-  //   pep_img =
-  // } else if ((score >= 25) && (score < 50)) {
-  //   scoville = "Medium"
-  //   pep_img = 
-  // } else if ((score >= 50) && (score < 75)) {
-  //   scoville = "Hot"
-  // } else if ((score >= 75) && (score < 100)) {
-  //   scoville = "Extra Hot"
-  // } else if ((score >= 100) && (score < 125)) {
-  //   scoville = "Extremely Hot"
-  //   pep_img =
-  // } else {
-  //   scoville = "Fire"
-  //   pep_img =
-  // }
-  // textSize(25);
-  // text(`Your spice level is ${scoville}`, width/2 , height /3);
-  // add image here
-  textSize(25);
-  fill(255, 255, 255)
   text(`Hit space to play again`, width / 2, height / 2);
 }
 
@@ -141,7 +116,6 @@ function gameOver() {
       
 function keyPressed() {
   if ((key === ' ') || (key === 's')) {
-    // doodler.jump();
     setup();
     loop();
   } else if (key === 'J' || key === "j") {
