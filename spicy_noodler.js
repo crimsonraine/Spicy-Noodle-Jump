@@ -45,6 +45,18 @@ class Noodler {
       this.x += 4;
       this.goingLeft = false;
     }
+
+    if (keyIsDown(65)) {
+      this.x -= 4;
+      this.goingLeft = true;
+    }
+    
+    if (keyIsDown(68)) {
+      this.x += 4;
+      this.goingLeft = false;
+    }
+  
+
     
      for (let platform of platforms) {
        // collision detector

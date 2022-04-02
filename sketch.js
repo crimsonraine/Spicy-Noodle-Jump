@@ -1,3 +1,9 @@
+// Find my blog at https://codeheir.com/
+// I do a lot of p5.js stuff that might interest you!
+
+//import Noodler from "spicy_noodler.js";
+//import Platform from "Platform.js";
+
 let noodler;
 
 let gap;
@@ -13,7 +19,7 @@ function charSet() {
   textSize(24);
   image(bg, 0, 0);
   textAlign(CENTER);
-  text(`M for menu and J/j
+  text(`M for menu and J/j and K/k
 for a different ramen!
 (Trial Version)
 
@@ -52,8 +58,9 @@ function draw() {
 
     push();
     fill(0)
-    textSize(30);
+    textSize(50);
     textAlign(CENTER);
+    fill(255, 255, 255)
     text(score, width / 2, noodler.y - 150);
     pop();
 
@@ -78,10 +85,14 @@ function draw() {
 
 function gameOver() {
   
-  textSize(20);
+  textSize(30);
   image(bg, 0, 0);
+  fill(255, 255, 255);
   textAlign(CENTER);
-  text(`You scored ${score}`, width / 2, height / 4);
+  text(`You scored`, width / 2, height / 4);
+  fill(255, 0, 0);
+  textSize(50);
+  text(`\n${score}`, width / 2, height / 4);
   if (score < 25) {
     scoville = "Mild"
   } else if ((score >= 25) && (score < 50)) {
@@ -96,14 +107,40 @@ function gameOver() {
     scoville = "Fire"
   }
   textSize(25);
-  text(`Your spice level is ${scoville}!`, width/2 , height /3);
+  text(`\n\nYour spice level is ${scoville}!`, width/2 , height /3);
   sco = loadImage('Scoville Chart.png');
   image(sco, 0, 0 );
+  fill(255, 255, 255);
+
+  // if (score < 25) {
+  //   scoville = "Mild"
+  //   pep_img =
+  // } else if ((score >= 25) && (score < 50)) {
+  //   scoville = "Medium"
+  //   pep_img = 
+  // } else if ((score >= 50) && (score < 75)) {
+  //   scoville = "Hot"
+  //   pep_img =
+  // } else if ((score >= 75) && (score < 100)) {
+  //   scoville = "Extra Hot"
+  //   pep_img =
+  // } else if ((score >= 100) && (score < 125)) {
+  //   scoville = "Extremely Hot"
+  //   pep_img =
+  // } else {
+  //   scoville = "Fire"
+  //   pep_img =
+  // }
+  // textSize(25);
+  // text(`Your spice level is ${scoville}`, width/2 , height /3);
+  // add image here
   textSize(25);
+  fill(255, 255, 255)
   text(`Hit space to play again`, width / 2, height / 2);
 }
 
 
+      
 function keyPressed() {
   if ((key === ' ') || (key === 's')) {
     // doodler.jump();
@@ -114,5 +151,7 @@ function keyPressed() {
   } else if (key === 'M' || key === "m") {
     charSet();
     noLoop();
+  } else if (key === 'K' || key === "k") {
+    noodler.change_img(loadImage('imgs/ramen.png'), loadImage('imgs/ramen_reverse.png'))
   }
 }
