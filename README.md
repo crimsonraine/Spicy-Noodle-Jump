@@ -5,6 +5,7 @@ Credits to Luke Garrigan from codeheir.com for the code for a game frame!
 
 Contributors:
 
+K, J, N, D, B, J, A
 Kimberley Ni
 Jeannelle Tellado 
 Daniel Han
