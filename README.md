@@ -10,7 +10,7 @@ Kimberley Ni
 Jeannelle Tellado 
 Daniel Han
 Brendon Wan
-Nicole Leifer
+Micah Leifer
 Jason Chae
 Alex Kim
 
